@@ -1,9 +1,9 @@
 # Portfolio / Andrew Boylan / 2021
 Documents:
-**
-01 caselawAPIFYforPortfolio.ipynb**: Pulling 300K+ caselaw documents from Harvard Law School's Caselaw Access Project.
-**
-02 howToGetReviewDataFromGoogleMaps.ipynb**: A tutorial for how to pull review data from businesses on Google Maps.
+
+**01 caselawAPIFYforPortfolio.ipynb**: Pulling 300K+ caselaw documents from Harvard Law School's Caselaw Access Project.
+
+**02 howToGetReviewDataFromGoogleMaps.ipynb**: A tutorial for how to pull review data from businesses on Google Maps.
 
 **03 howToGetReviewDataFromYelp.ipynb**: A tutorial for how to pull review data from businesses on Yelp.
 
