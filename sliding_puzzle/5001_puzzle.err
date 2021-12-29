@@ -1,0 +1,17 @@
+####### ERROR LOG #######
+
+06/12/2021 22:07:12, ERROR: Puzzle corrupted. Incorrect number of pieces, LOCATION: loadClass.py
+06/12/2021 22:07:12, ERROR: Puzzle corrupted. Unable to get thumbnail from the specified location, LOCATION: loadClass.py
+06/12/2021 22:07:12, ERROR: Puzzle corrupted. Unable to get tile from the specified location, LOCATION: loadClass.py
+09/12/2021 23:31:44, ERROR: Puzzle choice not found., LOCATION: loadClass.py
+09/12/2021 23:31:49, ERROR: Puzzle corrupted. Incorrect number of pieces, LOCATION: loadClass.py
+09/12/2021 23:31:49, ERROR: Puzzle corrupted. Unable to get thumbnail from the specified location, LOCATION: loadClass.py
+09/12/2021 23:31:49, ERROR: Puzzle corrupted. Unable to get tile from the specified location, LOCATION: loadClass.py
+09/12/2021 23:32:08, ERROR: Puzzle choice not found., LOCATION: loadClass.py
+11/12/2021 23:56:29, ERROR: Puzzle choice not found., LOCATION: loadClass.py
+28/12/2021 14:23:36, ERROR: Puzzle choice not found., LOCATION: loadClass.py
+28/12/2021 15:30:23, ERROR: Puzzle corrupted. Incorrect number of pieces, LOCATION: loadClass.py
+28/12/2021 15:30:23, ERROR: Puzzle corrupted. Unable to get thumbnail from the specified location, LOCATION: loadClass.py
+28/12/2021 15:30:23, ERROR: Puzzle corrupted. Unable to get tile from the specified location, LOCATION: loadClass.py
+28/12/2021 15:30:29, ERROR: Puzzle choice not found., LOCATION: loadClass.py
+28/12/2021 15:32:34, ERROR: Puzzle choice not found., LOCATION: loadClass.py

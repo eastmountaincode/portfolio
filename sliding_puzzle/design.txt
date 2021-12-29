@@ -1,0 +1,39 @@
+DESIGN NOTES
+
+######### SWAP LOGIC #########
+
+The main behavior of the game lives in the Tile objects, a class defined in tileClass.py. Tiles are the individual pieces of the puzzle.
+
+Each Tile has a floorID and a tileID. I conceptualize by game board as an N by N size grid, when N is the square root of the number of pieces in the puzzle (which checks out because puzzles can only be squares), where each spot on the grid is conceptually labeled 0 to N-1. In a 16 piece puzzle, for example, the grid looks like this:
+
+[ 0  1  2  3  ]
+[ 4  5  6  7  ]
+[ 8  9  10 11 ]
+[ 12 13 14 15 ]
+
+A Tile's floorID corresponds to its place on the board. For example, a Tile on the spot on the far left in the second row would have a floorID of 4. A tile in the bottom right spot would have a floorID of 15. Meanwhile, a Tile's tileID refers to it's correct location in a solved puzzle. For example, the bottom right piece of the solved puzzle might be at the upper right spot and therefore have a floorID of 0, but its tileID would be 15. Thus, if every Tile's tileID is equal to its floorID, then the puzzle is solved.
+
+When a Tile is clicked, it checks if the blank Tile is above, below, to the right or left of it. If the blank Tile has a floorID of 2 and the clicked Tile has a floorID of 6, then we know the blankTile is above the clicked Tile and we can make a legal swap. Thus, for above and below, we check if the floorID of the blank Tile is a certain amount greater or less than that of the floorID of the clicked Tile, where the certain amount is equal to the square root of the total number of pieces in the puzzle. To check if the blank Tile is to the left or right of the clicked Tile, we check if its floorID is 1 less or 1 greater than the clicked Tile. In the horizontal case, we need to be careful to exclude situations where, for example, the clicked Tile is 7 and the blank Tile is 8; the blank Tile is "technically" to the right of the clicked Tile, but the clicked Tile cannot move any further to the right. Therefore, we create a list of invalid spaces for each kind of direction check and make sure the clicked Tile is not in any of them. For example, the invalid space for check if the blank Tile is to the right are 3, 7, and 11. Thus the invalid spaces for right check is a list created as the following: [(sqrtOfPuzz * i) - 1 for i in range(1, sqrtOfPuzz)]. A similar, but slightly different list is created for checking if the blank Tile is on the left, and I will leave it to the reader to investigate this in the code. 
+
+######### CLICK HANDLER #########
+
+Whenever Tiles are clicked, several things happen. 
+
+1. First we turn off the turtle.onclick() functionality for all the tiles. I wanted the user to be able to see the pieces actually move when the swap, purely for aesthetic reasons, because I think it looks nice. However, a Tile takes time to swap, and if the user clicks another Tile before the first one is done moving, chaos would occur (think Tiles moving off the board). However, this means that each individual Tile needs to be able to affect the behavior of every other Tile. For this reason, when the Tiles are created, we create a dictionary called obj_ledger and put each Tile object in the dictionary. Simultaneously, we also pass obj_ledger into each Tile as an attribute upon initialization. Since obj_ledger is always changed by reference, this is no problem; we're simply telling each Tile to look at the same obj_ledger dictionary object.
+
+2. Then we check where the blank tile is in relation to the clicked Tile. We get the floorID of the clicked Tile and the blank Tile. In order to do this, every Tile needs to know it's own floorID and the floorID of the blank Tile. Therefore, we have a dictionary called pos_ledger that, similarly to obj_ledger, get's passed in to every Tile when it is initialized. The key is the tileID and the value is the floorID of pos_ledger. Based on the location of the blank Tile relative to the clicked Tile, the Tiles either swap or they do not. Additionally, since every Tile needs to be able to move the blank Tile, we also pass in the blank Tile object as an attribute of every Tile.
+
+3. Once movement either has or has not occurred, we turn the turtle.onclick() function back on for all Tiles. 
+
+4. Then we check for a win condition. If win, we write the user's name to the leaderboard and close out the program.
+
+5. If there is no win condition, then we check for a loss condition (user has used up all the available moves). If loss, we write the user's name to the leaderboard and close out the program
+
+######### CHALLENGES FACED #########
+
+One the of the biggest hurdles I faced was the fact that turtle.onclick(func) causes func to run when the Turtle object is clicked but doesn't allow me to pass in any parameters into func. Therefore I had to make func work without any parameters. In this case, func was the Tile's click_handler() method. I solved this problem when I realized I could create a class for anything that needed to be clicked and have each object be assigned it's own turtle. That means there is a unique Turtle for each of the Tiles on the board. I have a dictionary called obj_ledger containing every Tile. I set the onclick() method for each Tile like this:
+
+for i in range(<number of total puzzle pieces>:
+    obj_ledger[i].turtle1.onclick(obj_ledger[i].click_handler)
+
+Then, whenever click_handler is activated by .onclick, because it is a method of an object, self is automatically passed as a parameters, and from self I can get whatever information that was passed into the object as a parameter. This means I pass whatever I need to handle clicks into every single one of my Tile objects. There might have been a more efficient method, but this is what I came upon with under the constraints. This experience taught be that objects are very useful for keeping things organized and manageable. 
