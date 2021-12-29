@@ -13,6 +13,8 @@ Documents:
 
 **06 APIFY_funding_request.pdf**: A written request for funding to purchase a subscription to services at apify.com explaining how the platform will be used and why it will be helpful to the project.
 
+**07 sliding_puzzle: A sliding puzzle game written in Python using the Turtle module. Run puzzle_game.py to execute.
+
 
 Data necessary to run code can be found in the data folder!
 
