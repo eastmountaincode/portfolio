@@ -15,9 +15,9 @@ Documents:
 
 **07 sliding_puzzle**: A sliding puzzle game written in Python using the Turtle module. Run puzzle_game.py to execute.
 
-**08 Weather_and_Bike_Share_Ridership: Analysis of correlation between Blue Bike trip duration and weather features
+**08 Weather_and_Bike_Share_Ridership**: Analysis of correlation between Blue Bike trip duration and weather features
 
-**09 shell.c: mini-shell project, facilitates all basic unix terminal commands as well as "cd", "history", "exit" and "help", as well as the use of pipes ("|"). Compile with "gcc shell.c -o shell".
+**09 shell.c**: mini-shell project, facilitates all basic unix terminal commands as well as "cd", "history", "exit" and "help", as well as the use of pipes ("|"). Compile with "gcc shell.c -o shell".
 
 Data necessary to run code can be found in the data folder!
 
