@@ -3,9 +3,11 @@ README
 The purpose of the Photo Album is to display snapshots. The photo album is built according to the Model-Controller-View architecture paradigm, and there are two types of views: Graphical and Web.
 
 GRAPHICAL VIEW
+
 <img width="664" alt="Screen Shot 2022-07-17 at 2 21 50 PM" src="https://user-images.githubusercontent.com/59405316/179419504-5db4c871-52af-458a-a771-60fe8918ca92.png">
 
 WEB VIEW
+
 <img width="811" alt="Screen Shot 2022-07-17 at 2 22 35 PM 1" src="https://user-images.githubusercontent.com/59405316/179419574-bfd4832d-07fb-4e1c-b6d7-341dff70a8dd.png">
 
 
