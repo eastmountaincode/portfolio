@@ -1,0 +1,74 @@
+body {
+	font-family: helvetica;
+	margin: 0;
+}
+
+.pageheader {
+	text-align: center;
+	padding: 10px;
+	padding-top: 20px;
+	opacity: 0.4;
+	text-decoration: underline;
+
+}
+
+.pageheader:hover {
+	opacity: 0.2;
+}
+
+.pageheader:visited {
+	color: black;
+}
+
+.wrapper {
+	display: flex;
+	margin: 20px;
+}
+
+.left {
+	width: 60%;
+	margin-left: 25px
+}
+
+.right {
+	width: 40%;
+	text-align: right;
+	margin-right: 30px;
+	font-size: 85%;
+}
+
+#pic1 {
+
+	max-width: 93%;
+	max-height: 100%;
+	margin: 20px;
+}
+
+#pic2 {
+	max-width: 75%;
+	max-height: 100%;
+	margin: 20px;
+
+}
+
+.paragraph-text {
+	margin-left: 80px;
+	font-size: 150%;
+	line-height: 1.5;
+}
+
+@media only screen and (max-width: 640px) {
+	.wrapper {
+		display: block;
+	}
+	.left {
+		width: 100%;
+		box-sizing: border-box;
+	}
+	.right {
+		width: 100%;
+		box-sizing: border-box;
+	
+	}
+	
+}
