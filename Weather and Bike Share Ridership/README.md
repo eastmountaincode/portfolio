@@ -1,10 +1,10 @@
-PROBLEM:
+**PROBLEM:**
 
 Our research questions for this project was, what are the biggest factors influencing Blue Bike trip duration in general,
 and what are the biggest weather-related factors influencing Blue Bike trip duration. Weather data and ride share data
 are both spanning the time from the beginning of November 2021 to the end of November 2021, in Boston, MA.
 
-OUTCOME:
+**OUTCOME:**
 
 We correlated bike-share trips to their nearest Weather Underground weather station.
 
