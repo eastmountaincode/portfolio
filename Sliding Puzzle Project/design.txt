@@ -27,11 +27,11 @@ Whenever Tiles are clicked, several things happen.
 
 4. Then we check for a win condition. If win, we write the user's name to the leaderboard and close out the program.
 
-5. If there is no win condition, then we check for a loss condition (user has used up all the available moves). If loss, we write the user's name to the leaderboard and close out the program
+5. If there is no win condition, then we check for a loss condition (user has used up all the available moves). If loss, we close out the program.
 
 ######### CHALLENGES FACED #########
 
-One the of the biggest hurdles I faced was the fact that turtle.onclick(func) causes func to run when the Turtle object is clicked but doesn't allow me to pass in any parameters into func. Therefore I had to make func work without any parameters. In this case, func was the Tile's click_handler() method. I solved this problem when I realized I could create a class for anything that needed to be clicked and have each object be assigned it's own turtle. That means there is a unique Turtle for each of the Tiles on the board. I have a dictionary called obj_ledger containing every Tile. I set the onclick() method for each Tile like this:
+One of the of the biggest hurdles I faced was the fact that turtle.onclick(func) causes func to run when the Turtle object is clicked but doesn't allow me to pass in any parameters into func. Therefore I had to make func work without any parameters. In this case, func was the Tile's click_handler() method. I solved this problem when I realized I could create a class for anything that needed to be clicked and have each object be assigned it's own turtle. That means there is a unique Turtle for each of the Tiles on the board. I have a dictionary called obj_ledger containing every Tile. I set the onclick() method for each Tile like this:
 
 for i in range(<number of total puzzle pieces>:
     obj_ledger[i].turtle1.onclick(obj_ledger[i].click_handler)
