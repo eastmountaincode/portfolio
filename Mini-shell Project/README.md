@@ -1,8 +1,8 @@
-PROBLEM:
+**PROBLEM:**
 
 Create a mini-shell that can handle UNIX commands, including commands with pipes ("|").
 
-OUTCOME:
+**OUTCOME:**
 
 A shell program!
 
