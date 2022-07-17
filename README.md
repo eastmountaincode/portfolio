@@ -1,4 +1,10 @@
-# Portfolio / Andrew Boylan / 2021
+# Portfolio / Andrew Boylan / 2022
+
+Welcome to my portfolio!
+
+![portfolio_pic](https://user-images.githubusercontent.com/59405316/179418336-9f8ef01e-6e83-434a-bf64-66592a65820d.jpg)
+
+
 Documents:
 
 **01 caselawAPIFYforPortfolio.ipynb**: Pulling 300K+ caselaw documents from Harvard Law School's Caselaw Access Project.
