@@ -1,4 +1,4 @@
-PROBLEM:
+**PROBLEM:**
 
 I wanted to do a couple things with this project:
 
@@ -6,7 +6,7 @@ I wanted to do a couple things with this project:
 - Learn how to actually deploy a model on a website
 
 
-OUTCOME:
+**OUTCOME:**
 
 A friend told me about Streamlit, a platform helpful for deploying data-oriented apps, which was perfect for my foray into
 text generation on the web. I got to learn about caching; everytime the button was clicked to generate new text, the 510MB model was being loaded from
