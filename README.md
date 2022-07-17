@@ -2,7 +2,8 @@
 
 Welcome to my portfolio!
 
-![portfolio_pic](https://user-images.githubusercontent.com/59405316/179418336-9f8ef01e-6e83-434a-bf64-66592a65820d.jpg)
+<img width="581" alt="Screen Shot 2022-07-17 at 1 50 27 PM" src="https://user-images.githubusercontent.com/59405316/179418374-d157cdb2-1910-479c-9ef2-0f91914acd65.png">
+
 
 
 Documents:
