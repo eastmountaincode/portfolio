@@ -1,4 +1,4 @@
-PROBLEM:
+**PROBLEM:**
 
 In this project for the University of Cincinnati's Digital Scholarship Center, the goal was to create a text 
 classifier that could, as accurately as possible, give the likelihood for a med school applicant to go into either 
@@ -8,7 +8,7 @@ It was suggested that the UC Admissions Department would then use this technolog
 guiding applicants who are more likely to go into the Family Medicine Specialization to pursue that path.
 
 
-OUTCOME
+**OUTCOME**
 
 We were able to achieve an accuracy of 0.8 using a K-Neighbors Classifier on a representation of the dataset created in the following way:
 
