@@ -1,6 +1,7 @@
 PROBLEM:
 
-A sliding puzzle game written in Python using the Turtle library. More details about implementation in design.txt file.
+A sliding puzzle game written in Python using the Turtle library, complete with animated moving pieces, a reset button, an error log, and a leaderboard.
+More details about implementation in design.txt file.
 
 OUTCOME:
 
