@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Shapes Album (Java - MVC):jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Shapes_Album__Java___MVC__jar</output-path>
+    <root id="archive" name="Shapes Album (Java - MVC).jar">
+      <element id="module-output" name="Shapes Album (Java - MVC)" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/resources/Homework9.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

@@ -368,6 +368,7 @@ class Tile:
                 winmsg.hideturtle()
                 turtle.clearscreen()
                 turtle.bye()
+                return
 
             # CHECK FOR LOSS
             if self.moveRecord.numMovesRemaining == 0:

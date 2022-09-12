@@ -30,3 +30,15 @@ The graphical view displays the first snapshot in the model upon initialization,
 WEB VIEW
 
 If the parsed argument specify that a web view should be made, a new web view is constructor with Features and a String which is the name of the html file that should be created. The web view essentially creates an html file based on what is in the model. For each snapshot, each shape is added to the html file using SVG tags. The resultant html file will be created in the resources package. 
+
+NOTES FOR USING .JAR FILE
+
+When running the .jar file from the command line, input the arguments in the following form:
+
+java -jar NameOfJARFile.jar -in "name-of-command-file" -view "type-of-view" -out "where-output-should-go" xmax ymax 
+
+for example:
+
+java -jar ShapesAlbum.jar -in "demo_input.txt" -view "graphical"
+
+xmax and ymax are optional, they specify the bounds of the view window. The -out tag is ignored for the graphical view since it is not used, but it is required for the web view. 

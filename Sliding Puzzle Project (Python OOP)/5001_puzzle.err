@@ -15,3 +15,6 @@
 28/12/2021 15:30:23, ERROR: Puzzle corrupted. Unable to get tile from the specified location, LOCATION: loadClass.py
 28/12/2021 15:30:29, ERROR: Puzzle choice not found., LOCATION: loadClass.py
 28/12/2021 15:32:34, ERROR: Puzzle choice not found., LOCATION: loadClass.py
+12/09/2022 17:28:47, ERROR: Puzzle corrupted. Incorrect number of pieces, LOCATION: loadClass.py
+12/09/2022 17:28:47, ERROR: Puzzle corrupted. Unable to get thumbnail from the specified location, LOCATION: loadClass.py
+12/09/2022 17:28:47, ERROR: Puzzle corrupted. Unable to get tile from the specified location, LOCATION: loadClass.py
