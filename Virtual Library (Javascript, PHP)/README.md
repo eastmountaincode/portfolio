@@ -1,0 +1,1 @@
+A website recreating the experience of a Free Little Library. Removing a file from the library deletes it, introducing a novel social dynamic.

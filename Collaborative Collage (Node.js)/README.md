@@ -1,0 +1,1 @@
+A collaborative collage, using web-sockets to facilitate real-time interaction.
