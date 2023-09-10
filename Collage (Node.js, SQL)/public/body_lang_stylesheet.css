@@ -1,0 +1,131 @@
+body {
+    display: grid;
+    place-items: center;
+    height: 50vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    gap: 1em;
+    font-size: 20px;
+}
+h1 {
+    text-align: center;
+    width: 100%;
+}
+#imageArea {
+    width: 900px;
+    height: 1100px;
+    border: 3px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+#imageArea img {
+    position: absolute;  /* Allows for dragging without affecting other elements' positions */
+
+    width: 150px;  /* Initial width */
+    height: 150px; /* Initial height */
+
+    touch-action: none; /* Prevents default touch behavior */
+
+    cursor: grab;
+
+    resize: none;
+}
+
+
+#imageArea img:hover {
+    outline: 1px solid black;
+}
+
+.selected {
+    box-shadow: 0px 0px 10px black;
+    outline: 25px solid transparent;
+}
+
+.selected:hover {
+    outline: 25px solid transparent;
+}
+
+#uploadSection, #deleteSection, #zIndexControlSection,
+#deleteAllSection, #downloadScreenshotSection, #currentlyConnectedUsersSection {
+    text-align: left;
+    width: 70%;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+#deleteButton, #deleteAllButton {
+    margin-right: 65px; /* space between delete button and are you sure text */
+}
+
+#zIndexText {
+    margin-right: 30px;
+}
+
+
+#bottomPadding {
+    height: 80px;
+    width: 100%;
+}
+
+.red-shadow {
+    outline: 2px solid red;
+}
+
+#toggleButton {
+    display: block;
+    font-family: 'Helvetica';
+    font-size: 20px;
+    text-align: center;
+}
+
+#more {
+    display: none;
+    padding: 10px 60px;  /* The first value is for top/bottom, the second for left/right. */
+    font: black;
+}
+
+
+
+/* This stuff is for when the web socket closes and we alert the user */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; 
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover, .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+

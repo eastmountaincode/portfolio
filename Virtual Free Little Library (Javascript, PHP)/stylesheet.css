@@ -1,0 +1,193 @@
+.table {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    color: #7FFF00;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+
+    color: black;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Generic styles for all cells */
+.cell {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    min-width: 0; /* New! This ensures that all cells will have the same width */
+}
+
+
+#uploadArea1, #uploadArea2, #uploadArea3, #uploadArea4 {
+    padding: 10px;
+}
+
+#fileSelect1, #fileSelect2, #fileSelect3, #fileSelect4,
+#uploadButton1, #uploadButton2, #uploadButton3, #uploadButton4,
+#downloadButton1, #downloadButton2, #downloadButton3, #downloadButton4 {
+    display: block; /* Make them take up their own line */
+    margin: 10px auto;
+    width: 70%;
+    margin-bottom: 10px; /* Add some space below each item */
+    text-align: center;
+}
+
+.buttonDiv {
+    text-align: center;
+    /* border: 2px solid blue; */
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    color: #7FFF00;
+}
+
+.library {
+    position: relative;
+    width: 100%;
+    padding-top: 150px; /* provide space for the triangle */
+    padding-bottom: 0px; /* provide space for the trunk */
+}
+
+.roof {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: 1;
+}
+
+.roof::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 48vw solid transparent;
+    border-right: 48vw solid transparent;
+    border-bottom: 150px solid #7FFF00;
+}
+
+.trunk {
+    position: relative;
+    width: 260px;
+    height: 500px;
+    background-color: #7FFF00;
+    margin: auto;
+}
+
+
+#fileSelect1, #fileSelect2, #fileSelect3, #fileSelect4 {
+    color: black;
+}
+
+/* SMALL SCREENS */
+@media screen and (max-width: 888px) {
+    #fileInfo1, #fileInfo2, #fileInfo3, #fileInfo4 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .table {
+        max-width: 88%;
+    }
+    .table, .row {
+        flex-direction: column;
+    }
+
+    .cell {
+        border-top: 26px solid hsl(90, 100%, 50%);
+        border-left: 26px solid hsl(90, 100%, 50%);
+        border-right: 26px solid hsl(90, 100%, 50%);
+        border-bottom: none; /* Remove the bottom border from all cells */
+        padding: 10px;
+    }
+
+    .row:last-child {
+        border-bottom: 26px solid hsl(90, 100%, 50%);
+        border-top: none;
+    }
+
+    h3 {
+        font-size: 9px;
+    }
+
+    .trunk {
+    position: relative;
+    width: 200px;
+    height: 500px;
+    background-color: #7FFF00;
+    margin: auto;
+    }
+
+    .buttonDiv {
+        /* border: 2px solid blue; */
+        padding: 0;
+
+    }
+}
+
+/* LARGE SCREENS */
+@media screen and (min-width: 889px) {
+    #more {
+      padding: 10px 240px;
+    }
+
+    /* Specific styles for each box */
+    .cell.box1 {
+        border-top: 32px solid hsl(90, 100%, 50%);
+        border-left: 32px solid hsl(90, 100%, 50%);
+        border-right: 32px solid hsl(90, 100%, 50%);
+    }
+
+    .cell.box2 {
+        border-top: 32px solid hsl(90, 100%, 50%);
+        border-right: 32px solid hsl(90, 100%, 50%);
+    }
+
+    .cell.box3 {
+        border-top: 32px solid hsl(90, 100%, 50%);
+        border-left: 32px solid hsl(90, 100%, 50%);
+    }
+
+    .cell.box4 {
+        border-top: 32px solid hsl(90, 100%, 50%);
+        border-left: 32px solid hsl(90, 100%, 50%);
+        border-right: 32px solid hsl(90, 100%, 50%);
+    }
+
+    .row:last-child .cell {
+        border-bottom: 32px solid hsl(90, 100%, 50%);
+    }
+
+  }
+
+#toggleButton {
+    display: block;
+    font-family: 'Helvetica';
+    /* font-weight: bold; */
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#more {
+    display: none;
+    padding: 10px 60px;  /* The first value is for top/bottom, the second for left/right. */
+    margin-top: 10px;
+    /* border-top: 1px solid #eee; */
+    font: black;
+}

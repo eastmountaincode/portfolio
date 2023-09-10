@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Image</title>
+    <link rel="stylesheet" href="collage/body_lang_stylesheet.css">
+    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.10.11/dist/interact.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuidv4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+</head>
+<body>
+    <h1>Body Language, a collaborative collage</h1>
+
+    <div id="uploadSection">
+        <label for="imageInput">Add Image:</label>
+        <input type="file" id="imageInput" class="buttonCheck" accept="image/*">
+        <button id="uploadButton" class="buttonCheck" disabled>Upload</button>
+        <progress id="uploadProgress" value="0" max="100"></progress>
+    </div>
+    <div id="deleteSection">
+        <span>Delete Image: </span>
+        <button id="deleteButton" class="buttonCheck" disabled>Delete</button>
+        <span id="confirmText" style="opacity: 0.3;">Are you sure?</span>
+        <button id="confirmDelete" class="buttonCheck" disabled>Yes</button>
+        <button id="cancelDelete" class="buttonCheck" disabled>No</button>
+    </div>
+    <div id="zIndexControlSection">
+        <span id="zIndexText">Move Image to Front or Back: </span>
+        <button id="sendToFrontButton" class="buttonCheck" disabled>Send to front</button>
+        <button id="sendToBackButton" class="buttonCheck" disabled>Send to back</button>
+    </div>
+    <div id="imageArea">
+    </div>
+    <div id="deleteAllSection">
+        <span>Delete ALL Images: </span>
+        <button id="deleteAllButton" class="buttonCheck">Delete All</button>
+        <span id="confirmDeleteAllText" style="opacity: 0.3;">Are you sure?</span>
+        <button id="confirmDeleteAllButton" class="buttonCheck" disabled>Yes</button>
+        <button id="cancelDeleteAllButton" class="buttonCheck" disabled>No</button>
+    </div>
+    <div id="downloadScreenshotSection">
+        <span>Download a Screenshot: </span>
+        <button id="downloadScreenshotButton" class="buttonCheck">Download Screenshot</button>
+    </div>
+    <div id="currentlyConnectedUsersSection">
+        <span id="currentlyConnectedUsersText">Currently connected users: </span>
+    </div>
+
+    <a href="#" id="toggleButton">About / How To ⬇</a>
+    <div id="more">
+<strong>WELCOME</strong>
+<br>
+<br>
+Welcome to Body Language, a collaborative collage. You can add, move, and resize images, and you'll also see the interactions of other users in real-time. 
+<br>
+<br>
+<strong>ADDING IMAGES</strong>
+<br>
+<br>
+When adding an image, choose a file, then remember to press the upload button to add the image to the canvas. Added images will always appear in the upper left corner of the canvas. 
+<br>
+<br>
+<strong>RESIZING IMAGES</strong>
+<br>
+<br>
+You can resize images by dragging at the corner or sides of an image.
+<br>
+<br>
+<strong>DOWNLOADING A SCREENSHOT</strong>
+<br>
+<br>
+To download, a screenshot, press the "Download Screenshot" button near the bottom, then press "Download" on the alert that pops up. The screenshot will be saved to your downloads folder.
+<br>
+<br>
+<strong>TIP FOR FINDING IMAGES WITH TRANSPARENT BACKGROUNDS</strong>
+<br>
+<br>
+It's nice to add images with a transparent background. You can google "{image you want} transparent png" and find some results. Sometimes though, you'll just get an image with a white or checkered background. However, if you're on iPhone on the latest version, in your Photos app, you can press and hold on an image which will automatically separate it from its background, then press "Share", then press "Save Image" to save the image with a transparent background. Nice!  
+<br>
+<br>
+<strong>WEEKLY CLEANUP</strong>
+<br>
+<br>
+Every week, on Sunday at 12am we do cleanup: a screenshot of the current state of the collage is saved, and all images are removed.
+<br>
+<br>
+<br>
+<a href="https://www.instagram.com/ndrewboylan/">Instagram</a>
+<br>
+<br>
+<a href="https://www.linkedin.com/in/andrew-boylan-92842810a/">LinkedIn</a>
+<br>
+    </div>
+
+    <div id="bottomPadding"></div>
+
+    <div id="disconnectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p>WebSocket connection has closed. Please refresh to reconnect.</p>
+            <button onclick="location.reload();">Refresh</button>
+        </div>
+    </div>
+
+
+    <script src="collage/upload_logic.js"></script>
+    <script src="collage/image_logic.js"></script>
+ 
+</body>
+</html>
